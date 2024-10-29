@@ -2,7 +2,7 @@
 using namespace std;
 #include <queue>
 #include "tree.h"
-
+#This fucntion is used to print the childnode with parentsnode
 void printTree(Treenode<int> *root)
 {
     cout << root->data << " : ";
@@ -17,6 +17,7 @@ void printTree(Treenode<int> *root)
     }
 }
 
+#This function is used to takeinput levelwise
 Treenode<int> *takeinputlevelwise()
 {
     int rootdata;
@@ -45,6 +46,7 @@ Treenode<int> *takeinputlevelwise()
     return root;
 }
 
+#Ths function is used to print tree levelwise
 void printTreelevelwise(Treenode<int> *root)
 {
     queue<Treenode<int> *> pendingnodes;
@@ -74,6 +76,8 @@ void printTreelevelwise(Treenode<int> *root)
     }
 }
 
+#This function is used to count the nodes
+
 int countnodes(Treenode<int> *root)
 {
     if (root == NULL)
@@ -88,6 +92,7 @@ int countnodes(Treenode<int> *root)
     return ans;
 }
 
+#This function is used to sum of all nodes value
 int sumofnodes(Treenode<int> *root)
 {
     if (root == NULL)
@@ -102,6 +107,7 @@ int sumofnodes(Treenode<int> *root)
     return ans;
 }
 
+#This function is used to return the max value in all node
 int maxnodevalue(Treenode<int> *root)
 {
     if (root == NULL)
@@ -116,6 +122,7 @@ int maxnodevalue(Treenode<int> *root)
     return mx;
 }
 
+#This function is used to find node which has maximum value
 Treenode<int> *maxnode(Treenode<int> *root)
 {
     if(root==NULL)
@@ -134,6 +141,7 @@ Treenode<int> *maxnode(Treenode<int> *root)
     return mx;
 }
 
+#This functin is used to find the height of tree
 int height(Treenode<int> *root)
 {
     int ans1 = 1;
