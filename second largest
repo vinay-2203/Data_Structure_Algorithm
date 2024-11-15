@@ -1,0 +1,19 @@
+# This function is used to find the second largest element in the array 
+
+int getSecondLargest(vector<int> &arr) {
+        int first_largest = arr[0];
+        int second_largest = -1;
+        for(int i = 1; i < arr.size();i++)
+        {
+            if(first_largest < arr[i]){
+                second_largest = first_largest;
+                first_largest = arr[i];
+            }
+            else if(second_largest < arr[i] && first_largest > arr[i]){
+                second_largest = arr[i];
+            }
+        }
+        return second_largest;
+    }
+
+    
